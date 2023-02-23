@@ -35,7 +35,7 @@ await yargs(hideBin(process.argv))
     .command({
         command: 'sign <stagedRepoId>',
         handler: async ({ stagedRepoId, user, password }) => {
-            const stagingURL = `https://oss.sonatype.org/service/local/repositories/${stagedRepoId}/content/`;
+            const stagingURL = `https://s01.oss.sonatype.org/service/local/repositories/${stagedRepoId}/content/`;
 
             for await (let {
                 resourceURI: [url],
